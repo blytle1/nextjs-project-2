@@ -13,16 +13,6 @@ body {
   box-sizing: border-box;
 }
 
-a {
-  color: #e2e8f0;
-  margin-right: 10px;
-}
-
-a:hover {
-  color: rgb(213, 213, 105); 
-  text-decoration: underline;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: #e2e8f0;
   
