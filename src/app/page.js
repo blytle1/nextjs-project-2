@@ -1,17 +1,15 @@
-import Link from "next/link";
+import Header from './Components/header';   
 
 export default function Home() {
   return (
     <div>
-      <Link href="/About">About</Link>
-      <Link href="/Contact">Contact</Link> 
-      <Link href="/Services">Services</Link>
-      <Link href="/Products">Products</Link>
+      <Header />
       <h2>Home Page</h2>
       <p>Welcome to the home page</p>
       <button>Click me</button>
     </div>
   );
 }
+
 
 
