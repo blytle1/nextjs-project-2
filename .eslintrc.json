@@ -1,6 +1,3 @@
 {
-  "rules": {
-    "rule-to-disable": "off"
-  },
   "extends": ["next/core-web-vitals"]
 }
