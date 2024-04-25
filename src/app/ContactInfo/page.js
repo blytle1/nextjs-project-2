@@ -45,7 +45,7 @@ export default function ContactInfo() {
             </div>
             <div className="div2">
               <Image className="image1" src={formImage} alt="techimage" /> 
-              <button className="button1">Thank You!!</button>
+              <button className="button1">Submit</button>
             </div>
           </div>
         </form>
