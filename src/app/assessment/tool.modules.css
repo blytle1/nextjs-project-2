@@ -14,6 +14,7 @@ select {
     border: 3px solid yellow;
     padding: .25rem;
     text-align: center;
+    cursor: pointer;
 }
 
 .button1 {

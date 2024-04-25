@@ -17,7 +17,21 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+p {
+  color: #e2e8f0;
+  text-align: center;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  background-color: rgb(181, 26, 26) 
+}
+.image-container {
+  display: flex;
+  justify-content: space-around; /* Adjust this value to change the spacing between images */
+  flex-wrap: wrap; /* Allow images to wrap to the next row if there's not enough space */
+}
 
-
+.image-wrapper {
+  margin-bottom: 20px; /* Adjust this value to change the vertical spacing between images */
+}
 
 
