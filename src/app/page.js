@@ -3,12 +3,16 @@ import React from 'react'; //
 import Image from 'next/image';
 import formImage from './images/braillesense.png';
 import formImage2 from './images/qbraille.png'; 
+import formImage3 from './images/braillenote.jpeg';
 
 const imageData = [
   {link: 'https://hims-inc.com/product/braillesense-6/' }, 
 ];
 const imageData2 = [
   {link: 'https://hims-inc.com/product/qbraille-xl/' }, 
+];
+const imageData3 = [
+  {link: 'https://store.humanware.com/hus/blindness-braillenote-touch-plus-32.html' }, 
 ];
 
 export default function Home() {
@@ -31,14 +35,21 @@ export default function Home() {
         {imageData.map((item, index) => ( 
           <div key={index} className="image-wrapper">
             <a href={item.link} target="_blank" rel="noopener noreferrer">
-              <Image className="img1" src={formImage} alt={`Image ${index}`} width={375} height={200} />
+              <Image src={formImage} alt={`Image ${index}`} width={375} height={200} />
             </a>
           </div>
         ))}
         {imageData2.map((item, index) => ( 
           <div key={index} className="image-wrapper">
             <a href={item.link} target="_blank" rel="noopener noreferrer">
-              <Image className="img2" src={formImage2} alt={`Image ${index}`} width={375} height={200} />
+              <Image src={formImage2} alt={`Image ${index}`} width={375} height={200} />
+            </a>
+          </div>
+        ))}
+        {imageData3.map((item, index) => ( 
+          <div key={index} className="image-wrapper">
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <Image src={formImage3} alt={`Image ${index}`} width={375} height={200} />
             </a>
           </div>
         ))}
