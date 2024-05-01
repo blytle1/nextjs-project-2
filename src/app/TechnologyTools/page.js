@@ -8,7 +8,6 @@ export default async function TechnologyTools() {
   let dataArray = returned.rows;
   return (
     <>
-    <Header />
 <h1>Data from my Postgres SQL Database</h1>
     <br></br>
     <br></br>
@@ -21,6 +20,7 @@ export default async function TechnologyTools() {
       </tr>
     </thead>
     <tbody>
+    <Header />
       {dataArray.map((item) => (
         <tr key={item.id}>
           {Object.values(item).map((value, index) => (
