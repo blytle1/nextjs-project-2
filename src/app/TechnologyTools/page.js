@@ -1,20 +1,17 @@
-import Header from '../Components/header';  
+import Image from "next/image";
 import { sql } from '@vercel/postgres';
+import Link from 'next/link'; 
 
 export default async function TechnologyTools() {
-
-  const returned = await sql `SELECT brand, model, type FROM assistive_technology;`;
+  const returned = await sql `SELECT * FROM assistive_technology;`;
   let stringedReturn = JSON.stringify(returned.rows);
   let dataArray = returned.rows;
-   console.log(dataArray);
-
   return (
-    <div>
-      <Header />
-      <h2>Technology Tools</h2>
-
+    <>
+    <br></br>Hello world, Connecting it all together.
     <br></br>
-     <table>
+    <br></br>
+    <table>
     <thead>
       <tr>
         {dataArray.length > 0 && Object.keys(dataArray[0]).map((key) => (
@@ -31,8 +28,7 @@ export default async function TechnologyTools() {
         </tr>
       ))}
     </tbody>
-  </table> 
-  <br></br>
-    </div>
+  </table>
+    </>
   );
 }
