@@ -1,5 +1,6 @@
 import { sql } from '@vercel/postgres';
 import Link from 'next/link'; 
+import Header from './Components/header';   
 
 export default async function TechnologyTools() {
   const returned = await sql `SELECT * FROM assistive_technology;`;
@@ -8,7 +9,7 @@ export default async function TechnologyTools() {
   return (
     <>
     <Header />
-    <H1>Data from my Postgres SQL Database</H1>
+<h1>Data from my Postgres SQL Database</h1>
     <br></br>
     <br></br>
     <table>
