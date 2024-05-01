@@ -7,7 +7,8 @@ export default async function TechnologyTools() {
   let dataArray = returned.rows;
   return (
     <>
-    <br></br>Hello world, Connecting it all together.
+    <Header />
+    <H1>Data from my Postgres SQL Database</H1>
     <br></br>
     <br></br>
     <table>
