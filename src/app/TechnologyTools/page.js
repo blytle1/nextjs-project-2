@@ -1,6 +1,5 @@
 import { sql } from '@vercel/postgres';
-import Link from 'next/link'; 
-import Header from './Components/header';   
+import Link from 'next/link';   
 
 export default async function TechnologyTools() {
   const returned = await sql `SELECT * FROM assistive_technology;`;
@@ -20,7 +19,6 @@ export default async function TechnologyTools() {
       </tr>
     </thead>
     <tbody>
-    <Header />
       {dataArray.map((item) => (
         <tr key={item.id}>
           {Object.values(item).map((value, index) => (
