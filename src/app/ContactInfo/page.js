@@ -38,10 +38,6 @@ export default function ContactInfo() {
               </div>
             </div>
             <div>
-              <div className="div3">
-                <input className="input1" type="checkbox" name="terms" value="checked"/>
-                <p>I agree to the terms and conditions that my data will be taken and sold.</p>
-              </div>
             </div>
             <div className="div2">
               <Image className="image1" src={formImage} alt="techimage" /> 
