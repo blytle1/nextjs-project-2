@@ -1,11 +1,14 @@
 import { sql } from '@vercel/postgres';
 import Link from 'next/link';   
 import Header from '../Components/header';
+export const dynamic = 'force-dynamic';  
 
 export default async function TechnologyTools() {
-  const returned = await sql `SELECT * FROM assistive_technology;`;
+  const returned = await sql `SELECT brand, model, type, score FROM assistive_technology;`;
   let stringedReturn = JSON.stringify(returned.rows);
+  console.log("stringedReturn is:", stringedReturn);
   let dataArray = returned.rows;
+  console.log("dataArray is:", JSON.stringify(dataArray));
   return (
     <>
     <div>
