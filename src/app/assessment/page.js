@@ -12,12 +12,31 @@ export default function Assessment() {
   const [teacherSupport, setTeacherSupport] = useState("");
   const [totalScore, setTotalScore] = useState(null);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     // Do something with the state variables
     console.log(acuity, field, experience, advocacy, parentInvolvement, teacherSupport);
     const score = Number(acuity) + Number(field) + Number(experience) + Number(advocacy) + Number(parentInvolvement) + Number(teacherSupport);
     setTotalScore(score);
+
+
+  // Send a POST request to the API
+  const response = await fetch(`/api/filteredResults/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: totalScore
+
+  });
+   
+
+  // Check if the request was successful
+  if (response.ok) {
+    console.log('Data retrieved successfully', response.json()); 
+  } else {
+    console.error('Error retrieving data:', response.status);
+  }
   };
 
   return (
